@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/styles.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Bake a cake</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <img src="{{url_for('static', filename='images/mixing_bowl.png')}}" class="bowl-img" alt="">
+        </div>
+        <div class="right">
+            <div class="recipe-text">
+                <h2>Preparing the batter</h2>
+                In a bowl, combine
+                <ul>
+                    <li>2 eggs</li>
+                    <li>100ml milk</li>
+                    <li>1 tsp vanilla extract</li>
+                    <li> 120g sugar</li>
+                    <li> 120g self-raising flour</li>
+                    <li> 30g cocoa powder</li>
+                    <li>1 tsp baking powder</li>
+                    <li> Melted butter </li>
+                </ul>
+
+                <h2>Bake</h2>
+                <ul>
+                    <li>Pour batter into prepared tin</li>
+                    <li>Bake for 25-35 min</li>
+                </ul>
+
+                <h2>Cool</h2>
+                <ul>
+                    <li>Cool in tin for 5 minutes</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
