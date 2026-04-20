@@ -17,11 +17,24 @@ html {
 }
 
 .left {
-    flex-grow: 8;
+    width: 70%;
     border: 1px solid black;
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background-image: url("../images/table.png");
+    background-size: 100% 100%;
+}
+
+.stopwatch {
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    right: 0;
+    top: 0;
+    padding: 0.5em 2em 0.5em 2em;
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 
@@ -31,20 +44,78 @@ ul {
 
 .recipe-text {
     padding-left: 1em;
-    font-size: large;
+    font-size: larger;
 }
 
 .right {
-    flex-grow: 1;
+    width:30%;
     border: 1px solid black;
     background-image: url('../images/paper_texture.avif');
     background-size: 100% 100%;
 }
 
-.bowl-img{
+.recipe-text h2{
+    margin: 0;
+    padding: 0;
+}
+
+.bowl-img {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 40%;
+    height: 30%;
     transform: translate(-50%, -10%);
+}
+
+.batter-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 10%;
+    transform: translate(-60%, 55%);
+}
+
+.batter-img-mixed{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 20%;
+    transform: translate(-50%, 0%) perspective(700px) scaleX(0.95) scaleY(0.90);
+}
+
+.batter-img-hide{
+    opacity: 0%;
+    display: none;
+}
+
+.ingredients-img {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 130px;
+    height: 160px;
+    z-index: 3;
+    border: 1px dotted black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ingredients-img-bowl{
+    transform:scale(0.4);
+
+}
+
+
+
+/* spin animation */
+@keyframes spinInBowl {
+  from { transform: translate(-60%, 55%) rotate(0deg); }
+  to   { transform: translate(-60%, 55%) rotate(360deg); }
+}
+
+.rotate-batter {
+  transform-origin: 50% 50%;
+  animation: spinInBowl 0.8s linear infinite;
 }

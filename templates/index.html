@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
     <link rel="stylesheet" href="{{ url_for('static', filename ='css/styles.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,33 @@
 <body>
     <div class="main">
         <div class="left">
-            <img src="{{url_for('static', filename='images/mixing_bowl.png')}}" class="bowl-img" alt="">
+            <div id="all-ingredients">
+                <img src="{{url_for('static', filename='images/ingredients/butter.png')}}" class="ingredients-img"
+                    style="--x: 5%; --y: 25%;" alt="butter" id="butter">
+                <img src="{{url_for('static', filename='images/ingredients/egg.png')}}" class="ingredients-img"
+                    style="--x: 20%; --y: 8%;" alt="eggs" id="eggs">
+                <img src="{{url_for('static', filename='images/ingredients/flour.png')}}" class="ingredients-img"
+                    style="--x: 45%; --y: 14%;" alt="flour" id="flour">
+                <img src="{{url_for('static', filename='images/ingredients/milk.png')}}" class="ingredients-img"
+                    style="--x: 70%; --y: 5%;" alt="milk" id ="milk">
+                <img src="{{url_for('static', filename='images/ingredients/sugar.png')}}" class="ingredients-img"
+                    style="--x: 5%; --y: 50%;" alt="sugar" id="sugar" >
+                <img src="{{url_for('static', filename='images/ingredients/cocoa.png')}}" class="ingredients-img"
+                    style="--x: 15%; --y: 65%;" alt="cocoa powder" id="cocoa">
+                <img src="{{url_for('static', filename='images/ingredients/baking_soda.png')}}" class="ingredients-img"
+                    style="--x: 74%; --y: 50%;" alt="baking powder" id="baking_soda">
+                <img src="{{url_for('static', filename='images/ingredients/vanilla.png')}}" class="ingredients-img"
+                    style="--x: 75%; --y: 74%;" alt="vanilla extract" id="vanilla">
+                <img src="{{url_for('static', filename='images/whisk.jpg')}}" class="ingredients-img" 
+                style="--x: 50%; --y: 74%;" alt="whisk" id="whisk">
+            </div>
+
+            <img src="{{url_for('static', filename='images/mixing_bowl.png')}}" class="bowl-img" id="bowl-img" alt="mixing bowl">
+            <img src="{{url_for('static', filename='images/batter/batter-unmixed.png')}}" class="batter-img batter-img-hide" id="batter-img-unmixed" alt="unmixed batter">
+            <img src="{{url_for('static', filename='images/batter/batter-mixed.png')}}" class="batter-img-mixed batter-img-hide" id="batter-img-mixed" alt="mixed batter">
+            <div class="stopwatch">
+                <div class="time" id="time">00:00:00</div>
+            </div>
         </div>
         <div class="right">
             <div class="recipe-text">
@@ -35,18 +61,18 @@
                 <h2>Bake</h2>
                 <ul>
                     <li>Pour batter into prepared tin</li>
-                    <li>Bake for 25-35 min</li>
+                    <li>Bake for 25-35 min at 180°C</li>
                 </ul>
 
                 <h2>Cool</h2>
                 <ul>
                     <li>Cool in tin for 5 minutes</li>
                 </ul>
-                
+
             </div>
         </div>
     </div>
 
 </body>
-
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
 </html>
