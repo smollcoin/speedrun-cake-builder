@@ -13,34 +13,60 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="left">
-            <div id="all-ingredients">
-                <img src="{{url_for('static', filename='images/ingredients/butter.png')}}" class="ingredients-img"
-                    style="--x: 5%; --y: 25%;" alt="butter" id="butter">
-                <img src="{{url_for('static', filename='images/ingredients/egg.png')}}" class="ingredients-img"
-                    style="--x: 20%; --y: 8%;" alt="eggs" id="eggs">
-                <img src="{{url_for('static', filename='images/ingredients/flour.png')}}" class="ingredients-img"
-                    style="--x: 45%; --y: 14%;" alt="flour" id="flour">
-                <img src="{{url_for('static', filename='images/ingredients/milk.png')}}" class="ingredients-img"
-                    style="--x: 70%; --y: 5%;" alt="milk" id ="milk">
-                <img src="{{url_for('static', filename='images/ingredients/sugar.png')}}" class="ingredients-img"
-                    style="--x: 5%; --y: 50%;" alt="sugar" id="sugar" >
-                <img src="{{url_for('static', filename='images/ingredients/cocoa.png')}}" class="ingredients-img"
-                    style="--x: 15%; --y: 65%;" alt="cocoa powder" id="cocoa">
-                <img src="{{url_for('static', filename='images/ingredients/baking_soda.png')}}" class="ingredients-img"
-                    style="--x: 74%; --y: 50%;" alt="baking powder" id="baking_soda">
-                <img src="{{url_for('static', filename='images/ingredients/vanilla.png')}}" class="ingredients-img"
-                    style="--x: 75%; --y: 74%;" alt="vanilla extract" id="vanilla">
-                <img src="{{url_for('static', filename='images/whisk.jpg')}}" class="ingredients-img" 
-                style="--x: 50%; --y: 74%;" alt="whisk" id="whisk">
-            </div>
+    <div id="start-screen">
+        <div class="next-button start-button" id="start-button">
+            Start
+        </div>
+    </div>
 
-            <img src="{{url_for('static', filename='images/mixing_bowl.png')}}" class="bowl-img" id="bowl-img" alt="mixing bowl">
-            <img src="{{url_for('static', filename='images/batter/batter-unmixed.png')}}" class="batter-img batter-img-hide" id="batter-img-unmixed" alt="unmixed batter">
-            <img src="{{url_for('static', filename='images/batter/batter-mixed.png')}}" class="batter-img-mixed batter-img-hide" id="batter-img-mixed" alt="mixed batter">
+    <div class="main img-hide" id="game-screen">
+        <div class="left">
+            <div id="stage-1">
+                <div id="all-ingredients">
+                    <img src="{{url_for('static', filename='images/ingredients/butter.png')}}" class="ingredients-img"
+                        style="--x: 5%; --y: 25%;" alt="butter" id="butter">
+                    <img src="{{url_for('static', filename='images/ingredients/egg.png')}}" class="ingredients-img"
+                        style="--x: 20%; --y: 8%;" alt="eggs" id="eggs">
+                    <img src="{{url_for('static', filename='images/ingredients/flour.png')}}" class="ingredients-img"
+                        style="--x: 45%; --y: 14%;" alt="flour" id="flour">
+                    <img src="{{url_for('static', filename='images/ingredients/milk.png')}}" class="ingredients-img"
+                        style="--x: 70%; --y: 5%;" alt="milk" id="milk">
+                    <img src="{{url_for('static', filename='images/ingredients/sugar.png')}}" class="ingredients-img"
+                        style="--x: 5%; --y: 50%;" alt="sugar" id="sugar">
+                    <img src="{{url_for('static', filename='images/ingredients/cocoa.png')}}" class="ingredients-img"
+                        style="--x: 15%; --y: 65%;" alt="cocoa powder" id="cocoa">
+                    <img src="{{url_for('static', filename='images/ingredients/baking_soda.png')}}"
+                        class="ingredients-img" style="--x: 74%; --y: 50%;" alt="baking powder" id="baking_soda">
+                    <img src="{{url_for('static', filename='images/ingredients/vanilla.png')}}" class="ingredients-img"
+                        style="--x: 75%; --y: 74%;" alt="vanilla extract" id="vanilla">
+                    <img src="{{url_for('static', filename='images/whisk.jpg')}}" class="ingredients-img"
+                        style="--x: 50%; --y: 74%;" alt="whisk" id="whisk">
+                    <img src="{{url_for('static', filename='images/tin.png')}}" class="ingredients-img"
+                        style="--x: 20%; --y: 74%;" alt="tin" id="tin">
+                </div>
+
+
+                <img src="{{url_for('static', filename='images/mixing_bowl.png')}}" class="bowl-img" id="bowl-img"
+                    alt="mixing bowl">
+                <img src="{{url_for('static', filename='images/batter/batter-unmixed.png')}}"
+                    class="batter-img img-hide" id="batter-img-unmixed" alt="unmixed batter">
+                <img src="{{url_for('static', filename='images/batter/batter-mixed.png')}}"
+                    class="batter-img-mixed img-hide" id="batter-img-mixed" alt="mixed batter">
+            </div>
             <div class="stopwatch">
                 <div class="time" id="time">00:00:00</div>
+            </div>
+            <div class="next-button img-hide" id="next-button-bake">
+                Next
+            </div>
+
+            <div id="stage-2" class="img-hide">
+                <img src="{{url_for('static', filename='images/oven.png')}}" class="oven-img" id="oven-img" alt="oven">
+                <img src="{{url_for('static', filename='images/cake.png')}}" class="cake-img img-hide" id="cake-img"
+                    alt="baked cake">
+                <div class="next-button img-hide" id="done-button">
+                    Done
+                </div>
             </div>
         </div>
         <div class="right">
@@ -74,5 +100,6 @@
     </div>
 
 </body>
-    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+<script type="module" src="{{url_for('static', filename='js/main.js')}}"></script>
+
 </html>
