@@ -36,7 +36,6 @@ html {
     right: auto;
     bottom: auto;
     width: fit-content;
-    padding: 0.35em 1.4em 0.55em 1.4em;
     transform: none;
     font-size: 3rem;
 }
@@ -46,6 +45,83 @@ html {
     right: auto;
     bottom: auto;
     display: inline-block;
+}
+
+.start-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.start-left {
+    min-width: 220px;
+}
+
+.start-right {
+    max-width: 380px;
+    width: 100%;
+}
+
+.leaderboard-panel {
+    width: 100%;
+}
+
+#leaderboard-list {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.start-layout {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+    gap: 0;
+    align-items: stretch;
+}
+
+.start-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+}
+
+.start-right {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-image: url('../images/paper_texture.avif');
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+/* critical override: on start screen, do NOT use absolute button positioning */
+.start-layout .next-button,
+.start-layout .start-button {
+    position: static;
+    right: auto;
+    bottom: auto;
+    width: 260px;
+    transform: none;
+    font-size: 2.6rem;
+}
+
+/* keep leaderboard panel inside right column */
+.leaderboard-panel {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 .left {
