@@ -6,7 +6,7 @@ Drag ingredients into the bowl, whisk like your leaderboard ranking depends on i
 
 ## Demo here:
 Render might take a moment to wake up, but you can try it out here:
-https://speedrun-cake-builder.onrender.com/ 
+https://speedrun-cake-builder-it91.vercel.app/ 
 
 ## What it does
 
